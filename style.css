@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: #080014;
+    overflow: hidden;
+}
+
+/* SCREENS */
+
+.screen {
+    display: none;
+    width: 100%;
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #32115c 0%,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            #581845 0%,
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #080014,
+            #16002d,
+            #050008
+        );
+}
+
+.screen.active {
+    display: flex;
+    animation: fadeIn 0.8s ease;
+}
+
+/* CARD */
+
+.card {
+    width: min(500px, 90%);
+    padding: 45px 30px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 40px rgba(255, 0, 120, 0.15);
+
+    animation: float 4s ease-in-out infinite;
+}
+
+.emoji {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 18px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.small {
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+/* BUTTON */
+
+button {
+    margin-top: 20px;
+    padding: 15px 30px;
+
+    border: none;
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            45deg,
+            #ff2d75,
+            #ff6b9d
+        );
+
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(255, 45, 117, 0.3);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 10px 35px rgba(255, 45, 117, 0.5);
+}
+
+/* PASSWORD INPUT */
+
+input {
+    width: 80%;
+
+    padding: 15px;
+
+    margin-top: 15px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.3);
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.1);
+
+    color: white;
+
+    font-size: 17px;
+
+    text-align: center;
+
+    outline: none;
+}
+
+input::placeholder {
+    color:
+        rgba(255, 255, 255, 0.6);
+}
+
+#passwordMessage {
+    margin-top: 15px;
+    color: #ff7aa8;
+}
+
+/* QUESTION BUTTONS */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* FINAL SCREEN */
+
+.finalCard {
+    max-width: 700px;
+
+    padding: 50px 30px;
+
+    animation:
+        finalAppear 2s ease;
+
+    text-align: center;
+}
+
+.heart {
+    font-size: 90px;
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+.finalCard h1 {
+    font-size: 60px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff4b8b,
+            #ffffff,
+            #ff4b8b
+        );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+.finalCard p {
+    font-size: 21px;
+}
+
+.finalCard h2 {
+    margin-top: 25px;
+    font-size: 25px;
+}
+
+.stars {
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.end {
+    margin-top: 35px;
+    opacity: 0.7;
+    font-size: 16px !important;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes finalAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 35px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    .finalCard h1 {
+        font-size: 45px;
+    }
+
+    .card {
+        padding: 35px 20px;
+    }
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Surprise For You ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- START SCREEN -->
+    <section id="startScreen" class="screen active">
+
+        <div class="card">
+
+            <div class="emoji">👀</div>
+
+            <h1>Hey...</h1>
+
+            <p>I have a little surprise for you.</p>
+
+            <p class="small">
+                But first... you have to unlock it 😏
+            </p>
+
+            <button onclick="startSurprise()">
+                Start the Surprise 🎁
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PASSWORD SCREEN -->
+    <section id="passwordScreen" class="screen">
+
+        <div class="card">
+
+            <div class="emoji">🔐</div>
+
+            <h1>Wait a second...</h1>
+
+            <p>
+                This surprise is only for someone special.
+            </p>
+
+            <input
+                type="text"
+                id="passwordInput"
+                placeholder="Enter the secret code"
+                autocomplete="off"
+            >
+
+            <button onclick="checkPassword()">
+                Unlock 🔓
+            </button>
+
+            <p id="passwordMessage"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUESTIONS SCREEN -->
+    <section id="questionScreen" class="screen">
+
+        <div class="card">
+
+            <div class="emoji">🧐</div>
+
+            <h1>One little question...</h1>
+
+            <p id="questionText">
+                Are you ready for the real surprise? 👀
+            </p>
+
+            <div class="buttons">
+
+                <button onclick="nextQuestion()">
+                    YES ❤️
+                </button>
+
+                <button onclick="nextQuestion()">
+                    Obviously 😎
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEMORY SCREEN -->
+    <section id="memoryScreen" class="screen">
+
+        <div class="card">
+
+            <div class="emoji">✨</div>
+
+            <h1>Do you know something?</h1>
+
+            <p id="memoryText">
+                Some people come into our lives unexpectedly...
+            </p>
+
+            <button onclick="nextMemory()">
+                Continue ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL SURPRISE -->
+    <section id="finalScreen" class="screen">
+
+        <div class="finalCard">
+
+            <div class="heart">
+                ❤️
+            </div>
+
+            <h1>For You</h1>
+
+            <p>
+                Life becomes a little better when you have
+                someone who makes you smile without even trying.
+            </p>
+
+            <p>
+                Thank you for being such an amazing friend.
+            </p>
+
+            <h2>
+                You're genuinely special to me. 🫶
+            </h2>
+
+            <div class="stars">
+                ✨ ⭐ ✨ ⭐ ✨
+            </div>
+
+            <p class="end">
+                This little surprise was made just for you. ❤️
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
